@@ -1,0 +1,103 @@
+ctr;country;pdi;idv;mas;uai;lto;ind
+ALB;Albania;90;27;80;70;56;15
+ALG;Algeria;80;29;35;70;25;32
+SARA;Saudi Arabia;72;48;43;64;27;14
+UAE;United Arab Emirates;74;36;52;66;22;22
+ARG;Argentina;49;51;56;86;29;62
+ARM;Armenia;85;17;50;88;38;25
+AUL;Australia;38;73;61;51;56;71
+AUT;Austria;11;77;79;70;47;63
+AZE;Azerbaijan;85;28;50;88;59;22
+BAN;Bangladesh;80;5;55;60;38;20
+BLR;Belarus;95;48;20;95;53;15
+BEL;Belgium;65;81;54;94;61;57
+BEF;Belgium French;67;72;60;93;;
+BEN;Belgium Netherl;61;78;43;97;;
+BOS;Bosnia and Herzegovina;90;40;48;87;36;44
+BRA;Brazil;69;36;49;76;28;59
+BUL;Bulgaria;70;50;40;85;51;16
+BUF;Burkina Faso;70;15;50;55;27;18
+CAN;Canada;39;72;52;48;54;68
+CHL;Chile;63;49;28;86;12;68
+CHI;China;80;43;66;30;77;24
+COL;Colombia;67;29;64;80;6;83
+COS;Costa Rica;35;15;21;86;;
+CRO;Croatia;73;42;40;80;40;33
+CYP;Cyprus;;;;;;70
+CZE;Czech Rep;57;70;57;74;51;29
+DEN;Denmark;18;89;16;23;59;70
+DOM;Dominican Rep;;;;;13;54
+ECA;Ecuador;78;24;63;67;24;
+EGY;Egypt;80;13;55;55;22;0
+ETH;Ethiopia;70;7;65;55;14;46
+SAL;El Salvador;66;19;40;94;20;89
+EST;Estonia;40;62;30;60;71;16
+FIN;Finland;33;75;26;59;63;57
+FRA;France;68;74;43;86;60;48
+GEO;Georgia;65;15;55;85;24;32
+GER;Germany;35;79;66;65;57;40
+GHA;Ghana;80;9;40;65;1;72
+UK;United Kingdom;35;76;66;35;60;69
+GRE;Greece;60;59;57;100;51;50
+GUA;Guatemala;95;36;37;98;25;
+HOK;Hong Kong;68;50;57;29;93;17
+HUN;Hungary;46;71;88;82;45;31
+ICE;Iceland;30;83;10;50;57;67
+IND;India;77;24;56;40;51;26
+IDO;Indonesia;78;5;46;48;29;38
+IRA;Iran;58;23;43;59;30;40
+IRQ;Iraq;97;25;53;96;11;23
+IRE;Ireland;28;58;68;35;51;65
+ISR;Israel;13;56;47;81;47;
+ITA;Italy;50;53;70;75;39;30
+JAM;Jamaica;45;39;68;13;;
+JPN;Japan;54;62;95;92;100;42
+JOR;Jordan;70;20;45;65;20;43
+KOR;Korea South;60;58;39;85;86;29
+LAT;Latvia;44;70;9;63;69;13
+LIT;Lithuania;42;60;19;65;82;16
+LUX;Luxembourg;40;60;50;70;64;56
+MAC;North Macedonia;90;40;45;87;35;35
+MAL;Malaysia;100;27;50;36;47;57
+MLT;Malta;56;59;47;96;47;66
+MEX;Mexico;81;34;69;82;23;97
+MOL;Moldova;90;27;39;95;71;19
+MNG;Montenegro;#88;27;48;90;40;20
+MOR;Morocco;70;24;53;68;25;25
+NET;Netherlands;38;100;14;53;67;68
+NZL;New Zealand;22;69;58;49;55;75
+NIG;Nigeria;80;0;60;55;8;84
+NOR;Norway;31;81;8;50;55;55
+PAK;Pakistan;55;5;50;70;19;0
+PAN;Panama;95;11;44;86;;
+PER;Peru;64;20;42;87;5;46
+PHI;Philippines;94;17;64;44;46;42
+POL;Poland;68;47;64;93;49;29
+POR;Portugal;63;59;31;99;42;33
+PUE;Puerto Rico;68;43;56;38;27;90
+ROM;Romania;90;46;42;90;32;20
+RUS;Russia;93;46;36;95;58;20
+SAU;Saudi Arabia;72;48;43;64;27;14
+SER;Serbia;86;42;43;92;37;28
+SIN;Singapore;74;43;48;8;67;46
+SLK;Slovakia;100;57;100;51;53;28
+SLV;Slovenia;71;81;19;88;50;48
+SAF;South Africa;49;23;63;49;18;63
+SAW;South Africa white;49;65;63;49;;
+SPA;Spain;57;67;42;86;47;44
+SUR;Suriname;85;47;37;92;;
+SWE;Sweden;31;87;5;29;52;78
+SWI;Switzerland;34;79;70;58;42;66
+TAI;Taiwan;58;40;45;69;87;49
+TAN;Tanzania;70;25;40;50;34;38
+THA;Thailand;64;19;34;64;67;45
+TRI;Trinidad and Tobago;47;25;58;55;17;80
+TUR;Turkey;66;46;45;85;35;49
+USA;U.S.A.;40;60;62;46;50;68
+UGA;Uganda;;;;;24;52
+UKR;Ukraine;92;55;27;95;51;14
+URU;Uruguay;61;60;38;98;28;53
+VEN;Venezuela;81;26;73;76;16;100
+VIE;Vietnam;70;30;40;30;47;35
+ZAM;Zambia;60;35;40;50;30;42
+
