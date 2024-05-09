@@ -1,6 +1,6 @@
 """Module for the Country class."""
 
-from country import metrics
+from entities import metrics
 
 class Country:
     """

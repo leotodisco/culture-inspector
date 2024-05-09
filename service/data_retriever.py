@@ -1,5 +1,5 @@
 import pandas as pd
-from country import country
+from entities import country
 
 
 def retrieve_country_from_csv(country_name: str) -> country:
