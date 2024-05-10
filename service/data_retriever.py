@@ -12,8 +12,8 @@ def retrieve_country_from_csv(country_name: str) -> country:
     Returns:
     country (country.Country): A Country object containing the country's cultural dimensions.
     """
-    data = pd.read_csv('data/data.csv', sep=';')
-    
+    data = pd.read_csv("data/data.csv", sep=';')
+
     country_data = data[data['country'] == country_name]
     country_name = country_data['country'].values[0]
     country_code = country_data['ctr'].values[0]
@@ -23,15 +23,11 @@ def retrieve_country_from_csv(country_name: str) -> country:
     country_uai = country_data['uai'].values[0]
     country_lto = country_data['lto'].values[0]
     country_ind = country_data['ind'].values[0]
-    culture_data = {'name': country_name, 'code': country_code, 'pdi': country_pdi, 'idv': country_idv, 'mas': country_mas, 'uai': country_uai, 'lto': country_lto, 'ind': country_ind}
+    culture_data = {'name': country_name, 'code': country_code, 'pdi': country_pdi, 'idv': country_idv,
+                    'mas': country_mas, 'uai': country_uai, 'lto': country_lto, 'ind': country_ind}
     dispersion_metrics = country.metrics.DispersionMetrics(culture_data)
     country_obj = country.Country(country_name, country_code)
 
     country_obj.add_metrics(dispersion_metrics)
 
     return country_obj
-    
-
-
-
-    
