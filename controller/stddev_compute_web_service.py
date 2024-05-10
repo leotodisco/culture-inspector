@@ -1,3 +1,6 @@
+"""
+This module contains the route which implements the web service to compute the standard deviation of the Halstfede Dimensions.
+"""
 from flask import Flask, jsonify, request, make_response
 from service.standard_deviation import compute_standard_deviation
 
@@ -26,7 +29,10 @@ def compute_standard_deviation_route():
     except Exception as e:
         return make_response(jsonify({'error': 'Invalid input'}), 400)
 
-    result = compute_standard_deviation(data)
+    result, country_null_metrics = compute_standard_deviation(data)
+
+    result['null_values'] = country_null_metrics
+    
     return jsonify(result), 200
 
 
