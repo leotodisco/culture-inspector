@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .custom-select {
+            position: relative;
+            width: 500px; /* Aumenta la larghezza della select */
+        }
+
+        .custom-select select {
+            display: none;
+        }
+
+        .selected-values {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            min-height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Fai sì che la select personalizzata abbia la stessa larghezza della select nascosta */
+        }
+
+        .selected-values:hover {
+            border-color: dodgerblue;
+        }
+
+        .selected-values:focus {
+            outline: none;
+        }
+
+        .options {
+            position: absolute;
+            top: calc(100% + 5px); 
+            left: 0;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 5px; 
+            background-color: #fff;
+            display: none;
+        }
+
+        .options.active {
+            display: block;
+        }
+
+        .option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Stile della modale */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-select" tabindex="0">
+        <h2 style="text-align: center;">Country Selector</h2> <!-- Aggiunta della scritta sopra la select -->
+        <div class="selected-values">Seleziona i paesi</div>
+        <div class="options">
+            <!-- Le opzioni verranno aggiunte qui tramite JavaScript -->
+        </div>
+        <select id="countriesSelect">
+            <!-- Le opzioni verranno aggiunte qui ma nascoste -->
+        </select>
+    </div>
+
+    <!-- Modale -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Contenuto della modale</p>
+        </div>
+    </div>
+
+    <script src="./render.js"></script>
+</body>
+</html>
