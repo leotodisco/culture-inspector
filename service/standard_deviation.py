@@ -104,3 +104,4 @@ def create_list_of_null_country(list_of_null_country, item, dispersions):
         list_of_null_country.append((item['nationality'], 'ind'))
     
     return list_of_null_country
+
