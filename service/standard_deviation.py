@@ -2,6 +2,7 @@
 
 import numpy as np
 from service import data_retriever
+from entities.metrics import PowerDistance, Indulgence, Individualism, LongTermOrientation, Uncertainty, Masculinity
 
 
 def compute_standard_deviation(data: list):
@@ -61,12 +62,12 @@ def compute_standard_deviation(data: list):
     std_devs = list(np.nanstd(matrix, axis=0))
 
     result_dict = {
-        "pdi": std_devs[0],
-        "idv": std_devs[1],
-        "mas": std_devs[2],
-        "uai": std_devs[3],
-        "lto": std_devs[4],
-        "ind": std_devs[5]
+        "pdi": PowerDistance(std_devs[0]).toDict(),
+        "idv": Individualism(std_devs[1]).toDict(),
+        "mas": Masculinity(std_devs[2]).toDict(),
+        "uai": Uncertainty(std_devs[3]).toDict(),
+        "lto": LongTermOrientation(std_devs[4]).toDict(),
+        "ind": Indulgence(std_devs[5]).toDict()
     }
 
     return result_dict, null_values
