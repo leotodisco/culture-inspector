@@ -5,6 +5,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==2.1.5
 numpy
+flask-cors
 pandas
 python-dateutil==2.9.0.post0
 pytz==2024.1
