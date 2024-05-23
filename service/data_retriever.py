@@ -1,6 +1,6 @@
 import pandas as pd
 from entities import country
-
+import os
 
 def retrieve_country_from_csv(country_name: str) -> country:
     """
@@ -12,7 +12,14 @@ def retrieve_country_from_csv(country_name: str) -> country:
     Returns:
     country (country.Country): A Country object containing the country's cultural dimensions.
     """
-    data = pd.read_csv("data/data.csv", sep=';')
+    current_dir = os.path.dirname(__file__)
+
+    # Vai su di un livello
+    parent_dir = os.path.dirname(current_dir)
+
+    # Crea il percorso finale unendo il percorso della cartella desiderata e il nome del file
+    csv_path = os.path.join(parent_dir, 'data', 'data.csv')
+    data = pd.read_csv(csv_path, sep=';')
 
     country_data = data[data['country'] == country_name]
     country_name = country_data['country'].values[0]

@@ -3,11 +3,16 @@ This module contains the route which implements the web service to compute the s
 """
 from flask import Flask, jsonify, request, make_response
 from service.standard_deviation import compute_standard_deviation
+from flask_cors import CORS, cross_origin
+app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 app = Flask(__name__)
 
 
 @app.route('/compute_std_dev', methods=['POST'])
+@cross_origin()
 def compute_standard_deviation_route():
     """
     Web Service to compute the standard deviation of all of the six Halstfede Dimensions.
