@@ -22,7 +22,7 @@ def compute_standard_deviation_route():
         So number is the number of developers of a certain Nationality
 
     Returns:
-        dict: a dictionary containing the standard deviation of each of the 6 Halstfede Dimensions
+        dictx: a dictionary containing the standard deviation of each of the 6 Halstfede Dimensions
     """
     try:
         data = request.get_json()
