@@ -2,7 +2,8 @@
 
 import numpy as np
 from service import data_retriever
-from entities.metrics import PowerDistance, Indulgence, Individualism, LongTermOrientation, Uncertainty, Masculinity
+from entities.metrics import PowerDistance, Indulgence, Individualism, LongTermOrientation, Uncertainty, Masculinity, \
+    GeographicalDispersion
 
 
 def compute_standard_deviation(data: list):
@@ -30,7 +31,10 @@ def compute_standard_deviation(data: list):
 
     # Per ogni elemento nel file JSON
     for item in data:
-    # Ottenere i dati dal file CSV
+        if 'nationality' not in item:
+            continue
+
+        # Ottenere i dati dal file CSV
         country_data = data_retriever.retrieve_country_from_csv(item['nationality'])
 
         # controlla se ci sono valori nulli per le dimensioni di Hofstede
@@ -67,7 +71,7 @@ def compute_standard_deviation(data: list):
         "mas": Masculinity(std_devs[2]).toDict(),
         "uai": Uncertainty(std_devs[3]).toDict(),
         "lto": LongTermOrientation(std_devs[4]).toDict(),
-        "ind": Indulgence(std_devs[5]).toDict()
+        "ind": Indulgence(std_devs[5]).toDict(),
     }
 
     return result_dict, null_values

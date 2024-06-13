@@ -2,8 +2,11 @@
 This module contains the route which implements the web service to compute the standard deviation of the Halstfede Dimensions.
 """
 from flask import Flask, jsonify, request, make_response
+
+from entities.metrics import GeographicalDispersion
 from service.standard_deviation import compute_standard_deviation
 from flask_cors import CORS, cross_origin
+
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -23,6 +26,7 @@ def compute_standard_deviation_route():
             [
                 {"number": 3, "nationality": "Germany"},
                 {"number": 4, "nationality": "Spain"}
+                {"geographical_dispersion": 0.5}
             ]
         So number is the number of developers of a certain Nationality
 
@@ -37,7 +41,13 @@ def compute_standard_deviation_route():
     result, country_null_metrics = compute_standard_deviation(data)
 
     result['null_values'] = country_null_metrics
-    
+
+    for item in data:
+        if 'nationality' not in item:
+            geodisp = item['geographical_dispersion']
+            result['geographical_dispersion'] = GeographicalDispersion(geodisp).toDict()
+            break
+
     return jsonify(result), 200
 
 
