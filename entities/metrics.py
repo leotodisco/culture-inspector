@@ -146,7 +146,7 @@ class LongTermOrientation:
 
 class Indulgence:
     def __init__(self, IndulgenceDispersion):
-        self.IVRDescription = "IVR refers to the degree of freedom that societal norms give citizens to fulfill their human desires. A high level (Indulgence) indicates a society that allows relatively free gratification of basic and natural human desires related to enjoying life and having fun. Conversely, a low level (Restraint) indicates a society that controls gratification of needs and regulates it using strict social norms."
+        self.IVRDescription = "IND refers to the degree of freedom that societal norms give citizens to fulfill their human desires. A high level (Indulgence) indicates a society that allows relatively free gratification of basic and natural human desires related to enjoying life and having fun. Conversely, a low level (Restraint) indicates a society that controls gratification of needs and regulates it using strict social norms."
         self.IVRDispersionDescription = ""
         self.IVRDispersionEffects = []
         self.IVRDispersion = IndulgenceDispersion
