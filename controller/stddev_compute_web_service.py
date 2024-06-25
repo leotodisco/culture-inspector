@@ -8,7 +8,7 @@ from service.standard_deviation import compute_standard_deviation
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-cors = CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 app = Flask(__name__)
@@ -35,6 +35,7 @@ def compute_standard_deviation_route():
     """
     try:
         data = request.get_json()
+        print(data)
     except Exception as e:
         return make_response(jsonify({'error': 'Invalid input'}), 400)
 
@@ -47,6 +48,7 @@ def compute_standard_deviation_route():
             geodisp = item['geographical_dispersion']
             result['geographical_dispersion'] = GeographicalDispersion(geodisp).toDict()
             break
+
 
     return jsonify(result), 200
 
