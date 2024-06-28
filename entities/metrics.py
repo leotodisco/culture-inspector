@@ -58,7 +58,7 @@ class PowerDistance:
 class Individualism:
     def __init__(self, idvDispersion):
         self.IDVDispersionValue = idvDispersion
-        self.IDVDescription = "Your community exhibits a low dispersion value for this index. This could indicate that most of its members share the same preference regarding working in groups or alone."
+        self.IDVDescription = "IDV represents the degree to which people in a society are integrated into groups. A high level of such a dimension indicates a society in which individuals are expected to take care of only themselves and their immediate families. Conversely, a low level indicates a preference for a tightly-knit framework in society in which individuals can expect their relatives or members of a particular group to look after them in exchange for unquestioning loyalty."
         self.IDVDispersionDescription = ""
         self.IDVDispersionEffects = []
 
